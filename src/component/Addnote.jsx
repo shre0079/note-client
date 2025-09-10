@@ -23,7 +23,7 @@ export const Addnote = ({show,handleClose,edit,data}) => {
       });
     }else{
 
-      const res = await fetch(`http://localhost:9090/api/notes/${sessionStorage.getItem("email")}`, {
+      const res = await fetch(`https://note-server-1.onrender.com/api/notes/${sessionStorage.getItem("email")}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
