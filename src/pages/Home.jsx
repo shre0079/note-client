@@ -6,7 +6,7 @@ export const Home = () => {
   const [data,setData]= useState(null);
   const [flag,setFlag]=useState(false);
   const getData = async () => {
-    const response = await fetch(`http://localhost:9090/api/notes/${sessionStorage.getItem("email")}`);
+    const response = await fetch(`https://note-server-1.onrender.com/api/notes/${sessionStorage.getItem("email")}`);
     const json = await response.json();
     setData(json);
     console.log(json);
