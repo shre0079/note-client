@@ -14,7 +14,7 @@ export const Addnote = ({show,handleClose,edit,data}) => {
      
   }else {
     if(edit){
-      const res = await fetch(`http://localhost:9090/api/notes/${data.id}`, {
+      const res = await fetch(`https://note-server-1.onrender.com/api/notes/${data.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
