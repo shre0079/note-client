@@ -6,7 +6,7 @@ export const Home = () => {
   const [data,setData]= useState(null);
   const [flag,setFlag]=useState(false);
   const getData = async () => {
-    const response = await fetch(`https://note-server-1.onrender.com/api/notes/${sessionStorage.getItem("email")}`);
+      const response = await fetch(`https://note-server-1.onrender.com/api/notes/${sessionStorage.getItem("email")}`);
     const json = await response.json();
     setData(json);
     console.log(json);
@@ -31,9 +31,6 @@ export const Home = () => {
               return <Card key={note.id} id={note.id} title={note.title} date={note.date}desc={note.description}/>
             })
            }
-            
-
-            
           </div>
         </div>:null}
       </div>
